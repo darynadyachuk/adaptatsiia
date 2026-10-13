@@ -1,0 +1,127 @@
+.m_23880f17 {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: var(--tour-z-index);
+}
+
+.m_43070dfb {
+  position: fixed;
+  inset: 0;
+  pointer-events: auto;
+}
+
+.m_43070dfb:where([data-with-overlay-interaction]) {
+    pointer-events: none;
+  }
+
+.m_401e99ae {
+  position: absolute;
+  pointer-events: auto;
+  padding: var(--mantine-spacing-md);
+  border-radius: var(--tour-tooltip-radius, var(--mantine-radius-default));
+  box-shadow: var(--tour-tooltip-shadow, var(--mantine-shadow-md));
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+:where([data-mantine-color-scheme='light']) .m_401e99ae {
+    background-color: var(--mantine-color-white);
+    border: 1px solid var(--mantine-color-gray-3);
+}
+
+:where([data-mantine-color-scheme='dark']) .m_401e99ae {
+    background-color: var(--mantine-color-dark-7);
+    border: 1px solid var(--mantine-color-dark-4);
+}
+
+.m_401e99ae:where([data-centered]) {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    max-width: calc(100% - 16px);
+  }
+
+.m_4d935ac3 {
+  margin: 0;
+  font-weight: 600;
+  font-size: var(--mantine-font-size-md);
+  line-height: 1.4;
+  margin-bottom: var(--mantine-spacing-xs);
+}
+
+.m_2380c7d7 {
+  font-size: var(--mantine-font-size-sm);
+  line-height: 1.55;
+}
+
+.m_f5605c89 {
+  margin-top: var(--mantine-spacing-md);
+}
+
+.m_324c9375 {
+  position: absolute;
+  top: var(--mantine-spacing-xs);
+  right: var(--mantine-spacing-xs);
+}
+
+/* stylelint-disable-next-line selector-type-no-unknown */
+
+:where([dir='rtl']) .m_324c9375 {
+    right: auto;
+    left: var(--mantine-spacing-xs);
+  }
+
+.m_66c6e5bb {
+  font-size: var(--mantine-font-size-sm);
+}
+
+:where([data-mantine-color-scheme='light']) .m_66c6e5bb {
+    color: var(--mantine-color-gray-6);
+}
+
+:where([data-mantine-color-scheme='dark']) .m_66c6e5bb {
+    color: var(--mantine-color-dark-2);
+}
+
+.m_45dfa139 {
+  position: absolute;
+  pointer-events: auto;
+  width: var(--tour-beacon-size, 12px);
+  height: var(--tour-beacon-size, 12px);
+  border-radius: 50%;
+  background-color: var(
+    --tour-beacon-color,
+    var(--tour-color, var(--mantine-primary-color-filled))
+  );
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.m_af9f65e0 {
+  position: absolute;
+  inset: calc(var(--tour-beacon-size, 12px) * -0.35);
+  border-radius: 50%;
+  background-color: var(
+    --tour-beacon-color,
+    var(--tour-color, var(--mantine-primary-color-filled))
+  );
+  opacity: 0.3;
+  animation: m_b83bf210 1.5s ease-in-out infinite;
+}
+
+@keyframes m_b83bf210 {
+  0%,
+  100% {
+    transform: scale(0.8);
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}

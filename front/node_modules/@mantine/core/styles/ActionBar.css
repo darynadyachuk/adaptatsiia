@@ -1,0 +1,14 @@
+.m_de09d2d2 {
+  display: flex;
+  align-items: center;
+  gap: var(--mantine-spacing-sm);
+  width: fit-content;
+  margin-inline: auto;
+  padding: var(--mantine-spacing-xs) var(--mantine-spacing-sm);
+}
+
+.m_eab73b29 {
+  width: calc(0.0625rem * var(--mantine-scale));
+  align-self: stretch;
+  background-color: var(--mantine-color-default-border);
+}

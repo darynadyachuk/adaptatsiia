@@ -1,0 +1,98 @@
+.m_ba2e839b {
+  --toggle-size-xs: calc(1.375rem * var(--mantine-scale));
+  --toggle-size-sm: calc(1.625rem * var(--mantine-scale));
+  --toggle-size-md: calc(1.875rem * var(--mantine-scale));
+  --toggle-size-lg: calc(2.25rem * var(--mantine-scale));
+  --toggle-size-xl: calc(2.625rem * var(--mantine-scale));
+
+  --toggle-size: var(--toggle-size-md);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: calc(0.0625rem * var(--mantine-scale)) solid;
+  border-radius: var(--toggle-radius, var(--mantine-radius-default));
+  cursor: pointer;
+  appearance: none;
+  text-decoration: none;
+  line-height: 1;
+  user-select: none;
+  font-size: var(--mantine-font-size-xs);
+  width: var(--toggle-size);
+  min-width: var(--toggle-size);
+  height: var(--toggle-size);
+  padding: calc(var(--toggle-size) / 5);
+  font-weight: var(--mantine-font-weight-medium);
+}
+
+  .m_ba2e839b:where([data-auto-width]) {
+    width: auto;
+    padding: 0 calc(var(--toggle-size) / 4);
+  }
+
+  :where([data-mantine-color-scheme='light']) .m_ba2e839b {
+    background-color: var(--mantine-color-white);
+    border-color: var(--mantine-color-gray-4);
+    color: var(--mantine-color-gray-7);
+}
+
+  :where([data-mantine-color-scheme='dark']) .m_ba2e839b {
+    background-color: var(--mantine-color-dark-6);
+    border-color: var(--mantine-color-dark-4);
+    color: var(--mantine-color-dark-1);
+}
+
+  @media (hover: hover) {
+      :where([data-mantine-color-scheme='light']) .m_ba2e839b:hover:where(:not([data-disabled], [data-active])) {
+        background-color: var(--mantine-color-gray-0);
+  }
+
+      :where([data-mantine-color-scheme='dark']) .m_ba2e839b:hover:where(:not([data-disabled], [data-active])) {
+        background-color: var(--mantine-color-dark-5);
+  }
+}
+
+  @media (hover: none) {
+      :where([data-mantine-color-scheme='light']) .m_ba2e839b:active:where(:not([data-disabled], [data-active])) {
+        background-color: var(--mantine-color-gray-0);
+  }
+
+      :where([data-mantine-color-scheme='dark']) .m_ba2e839b:active:where(:not([data-disabled], [data-active])) {
+        background-color: var(--mantine-color-dark-5);
+  }
+}
+
+  .m_ba2e839b:where([data-active]) {
+    background-color: var(--toggle-active-bg, var(--mantine-primary-color-light));
+    color: var(--toggle-active-color, var(--mantine-primary-color-light-color));
+    border-color: transparent;
+  }
+
+  @media (hover: hover) {
+      .m_ba2e839b:where([data-active]):hover:where(:not([data-disabled])) {
+        background-color: var(--toggle-active-hover, var(--mantine-primary-color-light-hover));
+      }
+}
+
+  @media (hover: none) {
+      .m_ba2e839b:where([data-active]):active:where(:not([data-disabled])) {
+        background-color: var(--toggle-active-hover, var(--mantine-primary-color-light-hover));
+      }
+}
+
+  .m_ba2e839b:where([data-disabled]) {
+    cursor: not-allowed;
+    color: var(--mantine-color-disabled-color);
+    background-color: var(--mantine-color-disabled);
+    border-color: transparent;
+  }
+
+  :where([data-mantine-color-scheme='light']) .m_ba2e839b:where([data-disabled][data-active]) {
+      background-color: var(--mantine-color-gray-4);
+      color: var(--mantine-color-gray-6);
+}
+
+  :where([data-mantine-color-scheme='dark']) .m_ba2e839b:where([data-disabled][data-active]) {
+      background-color: var(--mantine-color-dark-4);
+      color: var(--mantine-color-dark-2);
+}
